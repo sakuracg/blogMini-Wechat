@@ -1,0 +1,137 @@
+.search-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+
+.search-container .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #fff;
+  z-index: 999;
+}
+
+.search-container .header .search-box {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;  
+  margin-right: 24rpx;
+  padding: 6px 12px;
+  background: #f2f2f4;
+  border-radius: 12px;
+}
+
+.header .search-box view:first-child {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header .search-box .icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 2px;
+  margin-right: 4px;
+  vertical-align: baseline;
+}
+
+.header .search-box .cancel-img {
+  width: 32rpx;
+  height: 32rpx;  
+  margin-top: 2px;
+}
+
+.header .search-box .bar {
+  width: 90%;
+  font-size: 28rpx;
+  color: #444;
+}
+
+.header .search-box .in-bar {
+  color: #aeaeaa;
+}
+
+.search-container .cancel {
+  padding: 6px 0;
+  color: #95B2F7;
+}
+
+
+/* 热门搜索主体 */
+
+.search-container .main {
+  margin-top: 124rpx;
+}
+
+.main .history {
+  margin-left: 40rpx;
+}
+
+.main .history .title  {
+  position: relative;
+  font-size: 32rpx;
+}
+
+.main .history .chunk {
+  height: 44rpx;
+  width: 0;
+  border-left: 4px solid #95B2F7;
+}
+
+.main .history .title text {
+  position: absolute;
+  left: 32rpx;
+  top: 2px;
+  color: #95B2F7;
+}
+
+.main .hot-search {
+  margin-top: 60rpx;
+}
+
+.main .tags {
+  margin: 20rpx;
+}
+
+/* 博客列表页面 */
+.main .blogs {
+  margin: 0 20rpx;
+  background: #F2F2F4;
+}
+
+.main .blogs wxz-blog > view {
+  margin-top: 32rpx;
+}
+
+/* loading */
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.loading {
+}
+
+.loading .spinner {
+  margin: 14px auto;
+  width: 30px;
+  height: 30px;
+}
+
+/* 没有搜索到书籍 */
+.text-center {
+  font-size: 36rpx;
+  color: #95B2F7;
+  white-space: nowrap;
+}

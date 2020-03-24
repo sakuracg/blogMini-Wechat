@@ -1,0 +1,71 @@
+/* 小心个页面的css 复用 */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.detail-container .header {
+  position: relative;
+  margin-bottom: 40rpx;
+  width: 100%;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.detail-container .title {
+  margin: 52rpx auto 20rpx;
+  font-size: 44rpx;
+  font-weight: 600;
+  color: #95b2f7;
+}
+.share {
+  position: absolute;
+  top: 52rpx;
+  right: 20rpx;
+  width: 80rpx;
+  height: 56rpx;
+  text-align: center;
+}
+
+.share image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.detail-container .desc image {
+  margin: 0 4rpx 0 12rpx;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 48rpx;
+  vertical-align: top;
+}
+
+.detail-container .desc text {
+  color: #444;
+}
+
+.detail-container .footer {
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.footer wxz-like, .footer wxz-collect {
+  margin-right: 28rpx;
+  padding: 2px 4px;
+  border-radius: 8px;
+  background: #eee;
+}
+
+.footer wxz-like image, .footer wxz-collect image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 4px;
+  margin-top: 1px;
+}
+
+.footer wxz-like text, .footer wxz-collect text {
+  font-size: 28rpx;
+}

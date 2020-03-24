@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wxz-like": "../like/index",
+    "wxz-collect": "../collect/index"
+  }
+}

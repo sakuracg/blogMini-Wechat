@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wxz-blog": "../blog/index",    
+    "wxz-tag": "../tag/index",
+    "wxz-loading": "../loading/index"
+  }
+}

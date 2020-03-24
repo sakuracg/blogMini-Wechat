@@ -1,0 +1,56 @@
+<view class="search-container">
+  <view class="header">
+    <view class="search-box">
+      <view>
+        <image class="icon" src="../images/search.png" />
+        <input value="{{q}}" bind:confirm="onConfirm" class="bar" placeholder-class="in-bar" placeholder="博客标题" auto-focus="true" />
+      </view>
+      <view>
+        <image bind:tap="onDeleteText" class="cancel-img" src="../images/delete.png" />
+      </view>
+    </view>
+    <view bind:tap="onCancel" class="cancel">取消</view>
+  </view>
+
+
+  <view class="main">
+    <!-- 搜索记录页面 -->
+    <view wx:if="{{!searching}}">
+      <view class="history">
+        <view class="title">
+          <view class="chunk"></view>
+          <text>历史搜索</text>
+        </view>
+        <view class="tags">
+          <block wx:for="{{historyWords}}" wx:key="*this">
+            <wxz-tag bind:tapping="onConfirm" text="{{item}}" />
+          </block>
+        </view>
+      </view>
+
+      <view class="history hot-search">
+        <view class="title">
+          <view class="chunk"></view>
+          <text>热门搜索</text>
+        </view>
+        <view class="tags">
+          <block wx:for="{{hotWords}}" wx:key="*this">
+            <wxz-tag bind:tapping="onConfirm" text="{{item}}" />
+          </block>
+        </view>
+      </view>
+    </view>
+    <!-- 博客列表页面 -->
+    <view wx:else class="blogs">
+      <block wx:for="{{dataArray}}" wx:key="id">
+        <wxz-blog blog="{{item}}" />        
+      </block>
+    </view>
+  </view>
+
+  <!-- loading -->
+  <wxz-loading class="loading-center" wx:if="{{loadingCenter}}" />
+  <wxz-loading class="loading" wx:if="{{loading}}" />
+  <!-- 没有结果 -->
+  <text wx:if="{{noneResult}}" class="loading-center text-center">主银，没有您搜索的东东喔~</text>
+</view>

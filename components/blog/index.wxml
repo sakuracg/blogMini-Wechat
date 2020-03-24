@@ -1,0 +1,27 @@
+<!--components/blog/blog.wxml-->
+<view class="blog-container">
+  <image bind:tap="onDetail" class="blog-img" src="{{ blog.image }}" />
+  <text class="blog-catename">{{ blog.cateName }}</text>
+  <view class="bolg-aside">   
+    <view class="blog-like">
+      <wxz-like bind:like="onLike" islike="{{likeStatus}}">
+        <text slot="count">{{likeCount}}</text>
+      </wxz-like>
+      <text class="border-line"></text>
+      <wxz-collect bind:collect="onCollect" isCollect="{{collectStatus}}">
+        <text slot="count">{{collectCount}}</text>
+      </wxz-collect>
+    </view>
+  </view>
+  
+  <view class="blog-content">
+    <view class="content">
+      <text bind:tap="onDetail" class="title">{{ blog.title }}</text>
+      <text class="desc">{{ blog.content }}</text>
+      <text class="cate-name">{{ blog.cateName }}</text>
+    </view>
+    <view class="img">
+      <image src="{{ blog.image }}" />
+    </view>
+  </view>
+</view>

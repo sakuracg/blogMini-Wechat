@@ -1,0 +1,48 @@
+.music-container {
+  height: 60rpx;
+  width: 294rpx;
+  position: relative;
+}
+
+.music-container .music-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+}
+
+.music-container .music-img {
+  position: absolute;
+  top: 10rpx;
+  left: 16rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.music-container .music-title {
+  position: absolute;
+  top: 10rpx;
+  left: 80rpx;
+  width: 160rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+
+.music-container .music-title text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #95b2f7;
+  animation: 5s wordsLoop linear infinite normal;
+}
+
+@keyframes wordsLoop {
+  0% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}

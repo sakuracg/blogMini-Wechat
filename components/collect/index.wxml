@@ -1,0 +1,5 @@
+<view bind:tap="onCollect" class="collect-container">
+  <image src="{{ isCollect ? yesSrc : noSrc }}" />
+  <slot name="count"></slot>
+  <slot name="name"></slot>
+</view>

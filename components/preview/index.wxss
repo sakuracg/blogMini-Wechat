@@ -1,0 +1,36 @@
+.preview-container {
+  width: 300rpx;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.preview-container .header {
+  display: flex;
+  justify-content: space-between;
+  margin: 16rpx 12rpx 16rpx 8rpx;
+}
+
+.header .header-right {
+  margin-right: 10px;
+  margin-top: 2px;
+  width: 48rpx;
+  height: 32rpx;
+}
+
+.header .header-right text {
+  margin-left: 4px;
+  font-size: 20rpx;
+}
+
+.preview-container .main image {
+  width: 300rpx;
+  height: 168rpx;
+}
+
+.preview-container .footer {
+  margin: 20rpx 20rpx 52rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #4e4e4e;
+}

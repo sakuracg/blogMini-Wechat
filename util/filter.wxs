@@ -1,0 +1,16 @@
+var formatText = function(text) {
+  return '123'
+}
+
+var formatTime = function(time) {
+  if (time) {    
+    var date = getDate(time)    
+    var month = date.getMonth() + 1
+    return date.getFullYear() + '年' + (month < 10 ? '0' + month : month) + '月' + date.getDate() + '日'
+  }
+}
+
+module.exports = {
+  formatText: formatText,
+  formatTime: formatTime
+}

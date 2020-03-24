@@ -1,0 +1,51 @@
+.aboutme-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.subject image {
+  width: 750rpx;
+  height: 421rpx;
+  vertical-align: top;
+}
+
+.subject text {
+  position: absolute;
+  width: 32rpx;
+  font-family: webfont;
+  font-size: 32rpx;
+  color: #f1bebe;
+  z-index: 2;
+}
+
+.subject .left {
+  top: 84rpx;
+  left: 170rpx;
+}
+
+.subject .right {
+  top: 32px;
+  right: 158rpx;
+}
+
+.bg > image {
+  width: 750rpx;
+  vertical-align: top;
+}
+
+.desc {
+  position: absolute;
+  top: 566rpx;
+  width: 388rpx;
+  padding: 34px 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: webfont;
+}
+
+.desc view {
+  color: #f1bebe;
+  font-size: 28rpx;
+  margin-bottom: 5px;
+}

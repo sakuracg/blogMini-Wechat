@@ -1,0 +1,30 @@
+<!--pages/blog/blog.wxml-->
+<view wx:if="{{!searching}}" class="blog-page-container">
+  <view class="header">
+    <view class="search" bind:tap="onSearching">
+      <image class="icon" src="/images/search.png" />
+      <text>搜索博客</text>
+    </view>
+    <wxz-music src="http://localhost:8001/images/tangqiao.mp3" />
+  </view>
+
+  <view class="blogs">
+    <block wx:for="{{blog}}" wx:key="id">
+      <wxz-blog blog="{{item}}" />
+    </block>
+  </view>
+
+  <view class="hot-blogs">
+    <view class="hot-left">
+      <image src="/images/hots.png" />
+      <text>异世界闯关勇士榜</text>
+    </view>
+    <block wx:for="{{browseBlog}}" wx:key="id">
+      <wxz-hotblog index="{{index}}" blog="{{item}}" />
+    </block>
+  </view> 
+  <!-- <audio src="/images/HITA - 风花雪月.mp3" controls="true"></audio> -->
+  <!-- <wxz-audio data="http://localhost:8001/images/tangqiao.mp3"/> -->
+</view>
+
+<wxz-search more="{{more}}" bind:cancel="onCancel" wx:else/>

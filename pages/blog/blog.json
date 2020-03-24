@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wxz-blog": "/components/blog/index",
+    "wxz-music": "/components/music/index",
+    "wxz-search": "/components/search/index",
+    "wxz-hotblog": "/components/hot-preview/index",
+    "wxz-audio": "/towxml/audio-player/audio-player"
+  }
+}

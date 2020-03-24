@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "towxml": "/towxml/towxml",
+    "wxz-like": "/components/like/index",
+    "wxz-collect": "/components/collect/index",
+    "wxz-button": "/components/image-button/index"
+  }
+}

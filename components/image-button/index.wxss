@@ -1,0 +1,7 @@
+/* components/image-button/index.wxss */
+.imageb-container {
+  padding: 0;
+  width: auto !important;
+  border: none !important;
+  background: transparent;
+}

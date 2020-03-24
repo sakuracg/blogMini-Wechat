@@ -1,0 +1,19 @@
+<view bind:tap="onDetail" class="preview-container">
+  <view class="header">
+    <wxz-tag text="{{blog.cateName}}" />
+    <view class="header-right">
+      <wxz-like wx:if="{{changeStatus}}" islike="{{true}}" readOnly="{{true}}">
+        <text slot="count">{{blog.favorNums}}</text>
+      </wxz-like>
+      <wxz-collect wx:if="{{!changeStatus}}" isCollect="{{true}}" readOnly="{{true}}">
+        <text slot="count">{{blog.collectNums}}</text>
+      </wxz-collect>
+    </view>
+  </view>
+  <view class="main">
+    <image src="{{blog.image}}" />
+  </view>
+  <view class="footer">
+    <text>{{blog.content}}</text>
+  </view>
+</view>

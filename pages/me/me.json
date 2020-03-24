@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wxz-button": "/components/image-button/index",
+    "wxz-preview": "/components/preview/index"
+  }
+}

@@ -1,0 +1,38 @@
+<wxs src="../../util/filter.wxs" module="util" />
+
+<view class="detail-container">
+  <!-- 标题以及下标 -->
+  <view class="header">
+    <view class="title">
+      <text>{{blog.title}}</text>
+    </view>
+     <view class="share">
+      <wxz-button open-type="share">
+        <image slot="img" src="/images/share.png" />
+      </wxz-button>
+    </view>
+    <view class="desc">
+      <image src="/images/detail/me.png" />
+      <text>{{blog.author}}</text>
+      <image src="/images/detail/time.png" />
+      <text>{{util.formatTime(timer)}}</text>
+      <image src="/images/detail/like.png" />
+      <text>{{blog.favorNums}}</text>
+      <image src="/images/detail/collect.png" />
+      <text>{{blog.collectNums}}</text>
+      <image src="/images/detail/browse.png" />
+      <text>{{blog.browseNums}}</text>
+    </view>
+  </view>
+  <view>
+    <towxml nodes="{{articleNew}}" />
+  </view>
+  <view class="footer">
+    <wxz-like bind:like="onLike" islike="{{likeStatus}}">
+      <text slot="name">{{likeStatus?'已点赞':'点赞'}}</text>
+    </wxz-like>
+    <wxz-collect bind:collect="onCollect" isCollect="{{collectStatus}}">
+      <text slot="name">{{collectStatus?'已收藏':'收藏'}}</text>
+    </wxz-collect>
+  </view>
+</view>

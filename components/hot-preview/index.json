@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wxz-collect": "../collect/index",
+    "wxz-tag": "../tag/index"
+  }
+}

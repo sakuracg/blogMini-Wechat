@@ -1,0 +1,76 @@
+.blog-page-container .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #fff;
+  z-index: 999;
+}
+
+.blog-page-container .header .search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24rpx;
+  background: #f2f2f4;
+  border-radius: 12px;
+}
+
+.blog-page-container .header .icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 1px;
+  margin-right: 4px;
+  vertical-align: baseline;
+}
+
+.blog-page-container .header text {
+  font-size: 28rpx;
+  color: #aeaeaa;
+}
+
+.blog-page-container .blogs {
+  margin: 124rpx 20rpx 0;
+}
+
+/* 自定义组件的标签 上面绑定选择器不生效 */
+
+.blog-page-container .blogs wxz-blog > view {
+  margin-top: 32rpx;
+}
+
+/* 人气榜 */
+
+.blog-page-container .hot-blogs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24rpx;
+  padding: 20rpx;
+  background: #fff;
+}
+
+.hot-blogs .hot-left {
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.hot-blogs .hot-left image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.hot-blogs .hot-left text {
+  padding-left: 20rpx;
+  font-size: 36rpx;
+  font-weight: 660;
+}
+
+.hot-blogs wxz-hotblog {
+  padding: 28rpx 0;
+  border-bottom: 2rpx solid #ccc;
+}

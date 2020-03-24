@@ -1,0 +1,7 @@
+<view class="music-container">
+  <image class="music-bg" mode="center" src="../images/music-bg.jpg" />
+  <image bind:tap="onPlay" class="music-img" src="{{playing?playSrc:pauseSrc}}" />
+  <view class="music-title">
+    <text>HITA - 风花雪月</text>
+  </view>
+</view>

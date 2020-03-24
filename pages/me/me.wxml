@@ -1,0 +1,33 @@
+<view class="me-container">
+  <image class="me-bg" src="/images/me-bg.png" />
+  <view class="about-box">
+    <view bind:tap="onAboutMe" class="about-us">
+      <image src="/images/me.png" />
+      <text class="desc">关于我</text>
+    </view>
+    <view bind:tap="onLike" class="about-us">
+      <text>{{likeCount}}</text>
+      <text class="desc">喜欢</text>
+    </view>
+    <view bind:tap="onCollect" class="about-us">
+      <text>{{collectCount}}</text>
+      <text class="desc">收藏</text>
+    </view>
+  </view>
+  <wxz-button wx:if="{{!authorized}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo" class="user-img">
+    <image slot="img" src="/images/nologin.jpg" />
+  </wxz-button>
+  <view wx:if="{{authorized}}" class="user-img">
+    <image src="{{userInfo.avatarUrl}}" />
+    <text>{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="like-collect">
+    <view class="tip">
+      <image src="{{changeStatus?likeSrc:collectSrc}}" />
+    </view>
+    <block wx:for="{{changeStatus?likeBlog:collectBlog}}" wx:key="id">
+      <wxz-preview changeStatus="{{changeStatus}}" blog="{{item}}"></wxz-preview>
+    </block>
+  </view>
+</view>

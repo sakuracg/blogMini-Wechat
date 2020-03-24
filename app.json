@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/blog/blog",
+    "pages/me/me",
+    "pages/picture/picture",
+    "pages/blog-detail/blog-detail",
+    "pages/aboutme/aboutme"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#95B2F7",
+    "navigationBarTitleText": "sakura 博客",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#95B2F7",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/blog/blog",
+        "text": "博客",
+        "iconPath": "/images/tab/read.png",
+        "selectedIconPath": "/images/tab/read@highlight.png"
+      },
+      {
+        "pagePath": "pages/picture/picture",
+        "text": "美图",
+        "iconPath": "/images/tab/picture.png",
+        "selectedIconPath": "/images/tab/picture@highlight.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/images/tab/me.png",
+        "selectedIconPath": "/images/tab/me@highlight.png"
+      }
+    ]
+  }
+}

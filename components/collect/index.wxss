@@ -1,0 +1,15 @@
+/* components/collect/index.wxss */
+.collect-container {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10rpx;    
+}
+
+.collect-container image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.collect-container text { 
+  color: #bbb;
+}

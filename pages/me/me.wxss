@@ -1,0 +1,102 @@
+.me-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.me-container .me-bg {
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 1px 2px #aeaeae;
+}
+
+.me-container .about-box {
+  padding: 24rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.about-box .about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.about-us text {
+  display: block;
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size: 28rpx;
+  color: #95b2f7;
+}
+
+.about-us .desc {
+  margin-top: 2px;
+  font-size: 28rpx;
+  color: #95b2f7;
+}
+
+/* 用户头像 */
+
+.me-container .user-img {
+  padding: 0;
+  position: absolute;
+  top: 240rpx;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160rpx;
+  height: 220rpx;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.me-container .user-img image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.me-container .user-img text {
+  font-size: 28rpx;
+  color: #95b2f7;
+}
+
+/* 喜欢和收藏 */
+
+.like-collect {
+  margin: 0 32rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.like-collect .tip {
+  position: relative;
+  width: 750rpx;
+  height: 138rpx;
+}
+
+.tip image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 192rpx;
+  height: 98rpx;
+  transform: translate(-50%, -50%);
+}
+
+.like-collect wxz-preview {
+  margin-bottom: 36rpx;
+}

@@ -1,0 +1,17 @@
+<view class="aboutme-container">
+  <view class="subject">
+    <image src="/images/aboutme1.png" />
+    <text class="left">沫雪总有归处</text>
+    <text class="right">回落千年之夏</text>
+  </view>
+
+  <view class="bg">
+    <image src="/images/aboutme3.jpg" />
+    <image src="/images/aboutme2.jpg" />
+    <view class="desc">
+      <view>弃舞从文，浪迹江湖，我就是我</view>
+      <view>QQ: 1353944230（说了我也不同意，啦啦啦~~~）</view>
+      <view>wx: 不告诉你</view>
+    </view>
+  </view>
+</view>
