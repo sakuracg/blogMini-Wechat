@@ -20,7 +20,8 @@ Page({
     blog: [],
     searching: false,
     more: '',
-    browseBlog: []
+    browseBlog: [],
+    status: false // 监听登录后返回主页面的改变
   },
 
   /**
@@ -72,17 +73,21 @@ Page({
 
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 生命周期函数--监听页面初次渲染完成 只加载一次
    */
   onReady: function() {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    if (!wx.getStorageSync('token')) {
+      this.setData({
+        status: true
+      })
+    }
   },
 
   /**

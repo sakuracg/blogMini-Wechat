@@ -49,7 +49,7 @@ Page({
   },
 
   getCollectBlogCon() {
-    userModel.getMyCollectBlogCon().then(res => {      
+    userModel.getMyCollectBlogCon().then(res => {
       this.setData({
         collectBlog: res.blogCollects,
         collectCount: res.count
@@ -65,9 +65,13 @@ Page({
           wx.getUserInfo({
             success: (res) => {
               this.setData({
-                authorized: true,
                 userInfo: res.userInfo
               })
+              if (checkUserLogin(false)) {
+                this.setData({
+                  authorized: true
+                })
+              }
             }
           })
         }
@@ -122,7 +126,7 @@ Page({
     })
   },
 
-  onCollect() {    
+  onCollect() {
     this.setData({
       changeStatus: false
     })

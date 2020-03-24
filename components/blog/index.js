@@ -15,6 +15,12 @@ Component({
   properties: {
     blog: {
       type: Object
+    },
+    showLike: {
+      type: Boolean
+    },
+    status: {
+      type: Boolean
     }
   },
 
@@ -27,6 +33,23 @@ Component({
     collectStatus: false,
     collectCount: 0
   },
+  pageLifetimes: {
+    show: function() {
+      // 页面被展示
+      if (this.data.status && wx.getStorageSync('token')) {
+        this.data.status = false
+        this.getUserBlogStatus()
+      }
+    },
+    hide: function() {
+      // 页面被隐藏
+    },
+    resize: function(size) {
+      // 页面尺寸变化
+    }
+  },
+
+
 
   attached() {
     this.setData({ // 设置喜欢和收藏个数
@@ -37,7 +60,6 @@ Component({
     if (token) {
       this.getUserBlogStatus() // 登录时查看用户是否喜欢
     }
-
   },
 
   /**
@@ -53,8 +75,8 @@ Component({
           })
         })
     },
-    
-    onDetail() {      // 请求博客文章
+
+    onDetail() { // 请求博客文章
       wx.navigateTo({
         url: `/pages/blog-detail/blog-detail?bid=${this.data.blog.id}&artical=${this.data.blog.artical}`,
       })

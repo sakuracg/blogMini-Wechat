@@ -1,12 +1,24 @@
 //app.js
 import {
   HTTP
-} from '/util/http.js'
-let Http = new HTTP()
+} from '/util/http-p.js'
+const Http = new HTTP()
 
 App({
   towxml: require('/towxml/index'),
   onLaunch: function() {
+    // 验证token
+    Http.request({
+      url: 'token/verify',
+      method: 'POST',
+      data: {
+        token: wx.getStorageSync('token')
+      }
+    }).then(res => {
+      if (!res.is_valid) {
+        wx.removeStorageSync('token')
+      }
+    })
     // 登录
     // wx.login({
     //   success: res => {

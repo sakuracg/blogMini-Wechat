@@ -12,9 +12,10 @@ Component({
 	lifetimes:{
 		// 页面生命周期
 		attached:function(){
+     
 			const _ts = this,
 				audio = _ts.audio = new Audio(this.data.data);
-
+      console.log(this.data.data)
 			audio.eventPlay = function(){
 				_ts.setData({tips:{state:'h2w__audio--play',text:'Playing'}});
 			};

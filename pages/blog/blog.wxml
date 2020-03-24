@@ -10,7 +10,7 @@
 
   <view class="blogs">
     <block wx:for="{{blog}}" wx:key="id">
-      <wxz-blog blog="{{item}}" />
+      <wxz-blog status="{{status}}" showLike="true" blog="{{item}}" />
     </block>
   </view>
 
@@ -22,9 +22,8 @@
     <block wx:for="{{browseBlog}}" wx:key="id">
       <wxz-hotblog index="{{index}}" blog="{{item}}" />
     </block>
-  </view> 
-  <!-- <audio src="/images/HITA - 风花雪月.mp3" controls="true"></audio> -->
-  <!-- <wxz-audio data="http://localhost:8001/images/tangqiao.mp3"/> -->
+  </view>
+  <!-- <audio autoplay="true" loop="true" name="风华血月" author="小志" poster="https://www.vvadd.com/wxml_demo/music.jpg" src="/images/HITA - 风花雪月.mp3" controls="true"></audio> -->
 </view>
 
 <wxz-search more="{{more}}" bind:cancel="onCancel" wx:else/>

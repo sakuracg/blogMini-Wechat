@@ -43,7 +43,7 @@
     <!-- 博客列表页面 -->
     <view wx:else class="blogs">
       <block wx:for="{{dataArray}}" wx:key="id">
-        <wxz-blog blog="{{item}}" />        
+        <wxz-blog showLike="{{false}}" blog="{{item}}" />        
       </block>
     </view>
   </view>

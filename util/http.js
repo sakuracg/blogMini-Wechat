@@ -27,10 +27,10 @@ class HTTP {
       },
       success: (res) => {
         let code = res.statusCode.toString()
-        let data = res.data        
+        let data = res.data
         if (code.startsWith('2') && !data.errorCode) {
           params.success && params.success(data)
-        } else {
+        } else {          
           this._show_error(data.msg, data.errorCode)
         }
       },

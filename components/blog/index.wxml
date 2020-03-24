@@ -3,7 +3,7 @@
   <image bind:tap="onDetail" class="blog-img" src="{{ blog.image }}" />
   <text class="blog-catename">{{ blog.cateName }}</text>
   <view class="bolg-aside">   
-    <view class="blog-like">
+    <view wx:if="{{showLike}}" class="blog-like">
       <wxz-like bind:like="onLike" islike="{{likeStatus}}">
         <text slot="count">{{likeCount}}</text>
       </wxz-like>
