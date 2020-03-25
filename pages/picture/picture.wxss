@@ -1,1 +1,11 @@
 /* pages/picture/picture.wxss */
+/* 没有搜索到书籍 */
+.text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 36rpx;
+  color: #95B2F7;
+  white-space: nowrap;
+}

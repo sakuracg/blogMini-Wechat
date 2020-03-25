@@ -70,6 +70,30 @@ Page({
         })
       })
   },
+
+  onLike(event) { // 喜欢
+    if (!checkUserLogin()) {
+      return
+    }
+    const behavior = event.detail.likeBehavior // 喜欢或者不喜欢 like or cancel
+    const likeStatus = behavior == 'like' ? true : false    
+    this.setData({ // 设置喜欢状态
+      likeStatus
+    })
+    likeCollectModel.like(behavior, this.data.blog.id)
+  },
+
+  onCollect(event) { // 用户收藏
+    if (!checkUserLogin()) {
+      return
+    }
+    const behavior = event.detail.collectBehavior
+    const collectStatus = behavior == 'collect' ? true : false    
+    this.setData({ // 设置喜欢状态
+      collectStatus
+    })
+    likeCollectModel.collect(behavior, this.data.blog.id)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

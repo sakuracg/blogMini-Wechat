@@ -27,6 +27,19 @@ Component({
     collectStatus: false,
   },
 
+  pageLifetimes: {
+    show: function () {
+      // 页面被展示     
+      this.onCollect()
+    },
+    hide: function () {
+      // 页面被隐藏
+    },
+    resize: function (size) {
+      // 页面尺寸变化
+    }
+  },
+
   attached() {
     const token = wx.getStorageSync('token')
     if (token) {

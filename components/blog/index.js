@@ -40,6 +40,7 @@ Component({
         this.data.status = false
         this.getUserBlogStatus()
       }
+      this.getUserBlogStatus()
     },
     hide: function() {
       // 页面被隐藏
